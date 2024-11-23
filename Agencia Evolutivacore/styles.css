@@ -1,0 +1,210 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sessão Desenvolvimento Web */
+.development-section {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1e1e2f, #4a4a8a);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.development-section::before,
+.development-section::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 60%);
+  animation: rotateBackground 20s infinite linear;
+  z-index: 0;
+}
+
+.development-section::before {
+  top: -50%;
+  left: -50%;
+}
+
+.development-section::after {
+  bottom: -50%;
+  right: -50%;
+}
+
+.development-content {
+  position: relative;
+  z-index: 2;
+}
+
+.development-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.development-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #f1f1f1;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards de Serviços */
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+  animation: zoomIn 1s ease;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(243, 156, 18, 0.2), rgba(230, 126, 34, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .development-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .development-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateBackground {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

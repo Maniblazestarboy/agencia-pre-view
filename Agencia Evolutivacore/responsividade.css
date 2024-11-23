@@ -1,0 +1,125 @@
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    .mobile-menu.active {
+      display: block;
+      max-height: 500px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .hero-content {
+        margin-bottom: 20px;
+      }
+    
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    
+      .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .hero-illustration {
+        display: none; /* Oculta a ilustração no mobile para melhor usabilidade */
+      }
+
+
+      .about-us-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .about-us-content {
+        margin-bottom: 20px;
+      }
+    
+      .about-title {
+        font-size: 2rem;
+      }
+    
+      .about-description {
+        font-size: 1rem;
+      }
+    
+      .about-mission {
+        font-size: 0.9rem;
+      }
+    
+      .about-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .about-us-image {
+        margin-top: 20px;
+      }
+    
+      .team-img {
+        width: 90%;
+      }
+    
+      .about-us-animation .lines {
+        display: none;
+      }
+
+      .team-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .team-member {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    
+      .section-header p {
+        font-size: 0.9rem;
+      }
+
+      .testimonials-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .testimonial-card {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .footer-top,
+      .footer-middle {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .footer-links ul {
+        text-align: center;
+      }
+    
+      .social-media {
+        align-items: center;
+      }
+  }
+  
+  
